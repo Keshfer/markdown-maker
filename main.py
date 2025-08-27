@@ -14,8 +14,6 @@ windll.shcore.SetProcessDpiAwareness(2)
 allowed_files = [
 	("Word Document", "*.docx"),
 	("OpenDocument Text", "*.odt"),
-	("Portable Document", "*.pdf"),
-	("Text Document", "*.txt")
 ]
 
 with filedialog.askopenfile(filetypes=allowed_files) as file:
