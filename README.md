@@ -6,8 +6,6 @@ The script currently converts:
 
 -.docx
 -.odt
--.pdf
--.txt
 
 ## How to build
 Pull the repository and make sure to have PyInstaller installed in your local or virtual environment.
