@@ -1,4 +1,4 @@
-#Markdown Maker
+# Markdown Maker
 
 Converts various document formats to markdown.
 
@@ -9,7 +9,7 @@ The script currently converts:
 -.pdf
 -.txt
 
-##How to build
+## How to build
 Pull the repository and make sure to have PyInstaller installed in your local or virtual environment.
 
 'pip install pyinstaller'
