@@ -11,7 +11,14 @@ windll.shcore.SetProcessDpiAwareness(2)
 # root = tk.Tk()
 # root.withdraw()
 
-with filedialog.askopenfile() as file:
+allowed_files = [
+	("Word Document", "*.docx"),
+	("OpenDocument Text", "*.odt"),
+	("Portable Document", "*.pdf"),
+	("Text Document", "*.txt")
+]
+
+with filedialog.askopenfile(filetypes=allowed_files) as file:
 	print(file)
 	print(file.name)
 	file_name = os.path.basename(file.name)
@@ -20,6 +27,6 @@ with filedialog.askopenfile() as file:
 	file_name = re.sub(r"\.[^.]+$", ".md", file_name, 1) 
 	print(dir_path)
 	print(file_name)
-	output_path = dir_path + "/" + file_name
+	output_path = dir_path + "/" + file_name #same directory as file
 	print(output_path)
 	pypandoc.convert_file(file.name, "md", outputfile=output_path)	
